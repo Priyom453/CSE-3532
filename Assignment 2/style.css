@@ -1,0 +1,272 @@
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f3f4f8;
+  color: #1e293b;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 24px 16px 60px;
+}
+
+/* ---------- Header ---------- */
+.header h1 {
+  font-size: 1.9rem;
+  margin-bottom: 6px;
+}
+
+.header p {
+  color: #64748b;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.btn-toggle {
+  background: #fff;
+  border: 1px solid #e2e5ec;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ---------- Stats ---------- */
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 24px 0;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px 20px;
+  border-left: 5px solid #3b82f6;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.stat-active { border-left-color: #22c55e; }
+.stat-inactive { border-left-color: #f97316; }
+
+.stat-label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+  margin-bottom: 6px;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 14px 0 6px;
+}
+
+form input,
+form select,
+.search-input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #e2e5ec;
+  background: #f8f9fb;
+  font-size: 0.95rem;
+  color: inherit;
+}
+
+form input:focus,
+form select:focus,
+.search-input:focus {
+  outline: 2px solid #3b82f6;
+}
+
+.btn-primary {
+  margin-top: 20px;
+  width: 100%;
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-primary:hover { background: #2563eb; }
+
+/* ---------- Search + filters ---------- */
+.search-input { margin-bottom: 14px; }
+
+.filter-tabs {
+  display: flex;
+  gap: 8px;
+  background: #f1f3f8;
+  border-radius: 10px;
+  padding: 4px;
+  margin-bottom: 18px;
+}
+
+.filter-btn {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background: #fff;
+  color: #3b82f6;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* ---------- Student list ---------- */
+.student-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.student-card {
+  border: 1px solid #e2e5ec;
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.student-info strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.student-info span {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.student-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+}
+
+.badge.active {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.badge.inactive {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.btn-delete {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.1rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.btn-delete:hover { color: #dc2626; }
+
+.empty-state {
+  text-align: center;
+  border: 2px dashed #d7dbe5;
+  border-radius: 12px;
+  padding: 40px 16px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.empty-state span {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+/* Hidden utility class, toggled via classList */
+.hidden { display: none; }
+
+/* ---------- Dark mode ---------- */
+body.dark-mode {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+body.dark-mode .card,
+body.dark-mode .stat-card,
+body.dark-mode .btn-toggle {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+body.dark-mode form input,
+body.dark-mode form select,
+body.dark-mode .search-input {
+  background: #0f172a;
+  border-color: #334155;
+  color: #e2e8f0;
+}
+
+body.dark-mode .filter-tabs {
+  background: #0f172a;
+}
+
+body.dark-mode .filter-btn.active {
+  background: #334155;
+  color: #93c5fd;
+}
+
+body.dark-mode .student-card {
+  border-color: #334155;
+}
+
+body.dark-mode .empty-state {
+  border-color: #334155;
+}
