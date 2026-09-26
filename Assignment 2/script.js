@@ -1,8 +1,4 @@
-/* =========================================================
-   STUDENT ACTIVITY DASHBOARD — script.js
-   Every section below is labelled with the DOM concept(s)
-   it demonstrates, so you can trace the concept -> the code.
-   ========================================================= */
+
 
 /* ---------- FINDING ELEMENTS: getElementById() ---------- */
 const studentForm   = document.getElementById('studentForm');
@@ -28,12 +24,7 @@ const filterButtons = document.querySelectorAll('.filter-btn');
 let students = [];          // { id, name, studentId, department, status }
 let currentFilter = 'all';  // 'all' | 'active' | 'inactive'
 let searchTerm = '';
-
-/* =========================================================
-   RENDERING — clears the list and rebuilds it from `students`
-   Demonstrates: createElement(), appendChild(), textContent,
-   classList.add(), setAttribute(), remove()
-   ========================================================= */
+
 function renderStudents() {
 
   // --- Removing elements: clear old cards before re-drawing ---
